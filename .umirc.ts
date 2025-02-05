@@ -29,6 +29,11 @@ export default defineConfig({
       path: '/table',
       component: './Table',
     },
+    {
+      name: '井字棋',
+      path: '/tic-tac-toe',
+      component: './ticTacToe',
+    },
   ],
   npmClient: 'pnpm',
 });
