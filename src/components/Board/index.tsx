@@ -1,6 +1,8 @@
+import styles from './index.less';
+
 function Square(props: { value: string; onClick: () => void }) {
   return (
-    <button type="button" className="square" onClick={props.onClick}>
+    <button type="button" className={styles.square} onClick={props.onClick}>
       {props.value}
     </button>
   );
@@ -62,18 +64,18 @@ export default function Board({
 
   return (
     <div>
-      <div className="status">{status}</div>
-      <div className="board-row">
+      <div className={styles.status}>{status}</div>
+      <div className={styles['"board-row']}>
         {renderSquare(0)}
         {renderSquare(1)}
         {renderSquare(2)}
       </div>
-      <div className="board-row">
+      <div className={styles['"board-row']}>
         {renderSquare(3)}
         {renderSquare(4)}
         {renderSquare(5)}
       </div>
-      <div className="board-row">
+      <div className={styles['"board-row']}>
         {renderSquare(6)}
         {renderSquare(7)}
         {renderSquare(8)}

@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import Board from '../Board';
+import styles from './index.less';
 
 export default function Game() {
   const [xIsNext, setXIsNext] = useState(true);
@@ -12,11 +13,11 @@ export default function Game() {
     setXIsNext(!xIsNext);
   }
   return (
-    <div className="game">
-      <div className="game-bord">
+    <div className={styles.game}>
+      <div className={styles['game-bord']}>
         <Board xIsNext={xIsNext} squares={currentSquares} onPlay={handlePlay} />
       </div>
-      <div className="game-info">
+      <div className={styles['game-info']}>
         <div>{/* status */}</div>
         <ol>{/* TODO */}</ol>
       </div>
